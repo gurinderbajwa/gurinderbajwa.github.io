@@ -1,6 +1,6 @@
 self.addEventListener("push", (e) => {
   var options = {
-  {
+  
   "body": "Did you make a $1,000,000 purchase at Dr. Evil...",
   "icon: "img/icon.png",
   "vibrate": [200, 100, 200, 100, 200, 100, 400],
