@@ -6,8 +6,7 @@ self.addEventListener("push", (e) => {
   "vibrate": [200, 100, 200, 100, 200, 100, 400],
   "tag": "request",
   "actions": [
-    { "action": "yes", "title": "Yes", "icon": "images/yes.png" },
-    { "action": "no", "title": "No", "icon": "images/no.png" }
+    { "icon": "https://stimg.cardekho.com/images/carexteriorimages/360x240/Mahindra/Mahindra-Alturas-G4/1547728970602/047.jpg" }
   ]
 };
 
