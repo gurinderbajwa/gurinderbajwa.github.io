@@ -1,3 +1,9 @@
+self.addEventListener('message', event => {
+  if (event.data === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener("push", (e) => {  
 var options = {
   "body": "Did you make a $1,000,000 purchase at Dr. Evil...",
