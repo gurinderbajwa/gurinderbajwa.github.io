@@ -1,7 +1,9 @@
-self.addEventListener('message', event => {
-  if (event.data === 'skipWaiting') {
-    self.skipWaiting();
-  }
+
+self.addEventListener('install', function (event) {
+ self.skipWaiting();
+    event.waitUntil(
+        // Do stuff
+    );
 });
 
 self.addEventListener("push", (e) => {  
