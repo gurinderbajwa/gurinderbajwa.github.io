@@ -1709,13 +1709,13 @@
         });
         console.log(JSON.stringify(push));
         
-      //  fetch("",{
-       // method:"POST",
-       //   headers:{
-      //      "Content-Type":"application/json"
-      //    },
-      //    body:JSON.stringify(push)
-      //  });
+        fetch("https://localhost:44363/api/ExternalClientController/SaveRequest",{
+        method:"POST",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body:JSON.stringify(push)
+        });
       
       }
     </script>
