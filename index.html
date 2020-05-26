@@ -1712,7 +1712,8 @@
         fetch("https://localhost:44363/api/ExternalClientController/SaveRequest",{
         method:"POST",
           headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "Access-Control-Allow-Origin": *
           },
           body:JSON.stringify(push)
         });
