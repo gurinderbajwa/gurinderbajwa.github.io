@@ -1709,13 +1709,11 @@
         });
         console.log(JSON.stringify(push));
         
-        fetch("https://localhost:44363/api/ExternalClientController/SaveRequest",{
+        fetch("https://localhost:44363/api/ExternalClient/SaveRequest",{
           mode: 'no-cors',
           method:"POST",
           headers:{
-            "Content-Type":"application/json",
-            "Origin": "https://www.gurinderbajwa.com",
-            
+            "Content-Type":"application/json"
           },
           body:JSON.stringify(push)
         });
