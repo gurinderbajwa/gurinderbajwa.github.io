@@ -2,6 +2,12 @@
 self.addEventListener('install', function (event) {
  self.skipWaiting();
 });
+self.addEventListener('notificationclick', function(event) {
+  event.notification.close();
+  event.waitUntil(
+    clients.openWindow(event.notification.data.url)
+  );
+})
 self.addEventListener("push", event => {
   if (event.data) {
     var payload = event.data.json();
