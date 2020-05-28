@@ -9,7 +9,10 @@ self.addEventListener("push", event => {
     var options = {
       body: payload.body,
       icon: payload.icon,
-      image: payload.image
+      image: payload.image,
+      data: {
+        url: payload.url
+      }
     };
 
     event.waitUntil(self.registration.showNotification(title, options));
