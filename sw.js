@@ -18,7 +18,7 @@ self.addEventListener("push", event => {
       image: payload.image,
       data: {
        url: "https://www.lpu.in",
-       id=1001
+       id: "1001"
      }
     };
 
