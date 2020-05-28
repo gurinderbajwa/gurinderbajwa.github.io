@@ -5,7 +5,7 @@ self.addEventListener('install', function (event) {
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
   event.waitUntil(
-    clients.openWindow(event.notification.data.url)
+    clients.openWindow(event.notification.data.url+?notification_id=" + event.notification.data.id)
   );
 })
 self.addEventListener("push", event => {
@@ -17,7 +17,8 @@ self.addEventListener("push", event => {
       icon: payload.icon,
       image: payload.image,
       data: {
-       url: "https://www.lpu.in"
+       url: "https://www.lpu.in",
+       id=1001
      }
     };
 
