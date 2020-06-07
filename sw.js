@@ -4,10 +4,10 @@ self.addEventListener('install', function (event) {
 });
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
-  event.waitUntil(
-    fetch('https://localhost:44363/api/ExternalClient/SendNotification?u='+event.notification.data.id,{
+  fetch('https://localhost:44363/api/ExternalClient/SendNotification?u='+event.notification.data.id,{
      mode: 'no-cors'
     });
+  event.waitUntil(
     clients.openWindow(event.notification.data.url)
   );
 })
