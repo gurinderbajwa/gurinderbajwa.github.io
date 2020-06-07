@@ -17,8 +17,8 @@ self.addEventListener("push", event => {
       icon: payload.icon,
       image: payload.image,
       data: {
-       url: "https://www.lpu.in",
-       id: "1001"
+       url: payload.url,
+       id: payload.id
      }
     };
 
