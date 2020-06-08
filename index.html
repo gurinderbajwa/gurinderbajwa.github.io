@@ -1650,7 +1650,7 @@
         <p>There was an error sending your message.</p>
       </div>
     </div>
-    <div id="hipush-popover-container" class="hipush-popover-container hipush-reset slide-down"><div id="hipush-popover-dialog" class="hipush-popover-dialog"><div id="normal-popover"><div class="popover-body"><div class="popover-body-icon"><img alt="notification icon" class="" src="https://ums.lpu.in/lpuums/login_images/lpu_logo.png"></div><div class="popover-body-message">We'd like to send you notifications for the latest news and updates.</div><div class="clearfix"></div></div><div class="popover-footer"><button id="hipush-popover-allow-button" onclick="susbcribe()" class="align-right primary popover-button">Allow</button><button id="hipush-popover-cancel-button" class="align-right secondary popover-button">No Thanks</button><div class="clearfix"></div></div></div></div></div>
+    <div id="hipush-popover-container" class="hipush-popover-container hipush-reset slide-down"><div id="hipush-popover-dialog" class="hipush-popover-dialog"><div id="normal-popover"><div class="popover-body"><div class="popover-body-icon"><img alt="notification icon" class="" src="https://ums.lpu.in/lpuums/login_images/lpu_logo.png"></div><div class="popover-body-message">We'd like to send you notifications for the latest news and updates.</div><div class="clearfix"></div></div><div class="popover-footer"><button id="hipush-popover-allow-button" onclick="subscribe()" class="align-right primary popover-button">Allow</button><button id="hipush-popover-cancel-button" class="align-right secondary popover-button">No Thanks</button><div class="clearfix"></div></div></div></div></div>
     <!-- /form-error -->
 
     <!-- Contact Form - Ajax Messages
@@ -1711,6 +1711,7 @@
         });
       }
       async function subscribe() {
+        $(".hipush-popover-container").hide();
         let sw = await navigator.serviceWorker.ready;
         let push = await sw.pushManager.subscribe({
           userVisibleOnly: true,
