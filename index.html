@@ -1694,6 +1694,14 @@
     <script src="js/main.js"></script>
     <!-- /Configurations -->
     <script>
+      $(function() {
+        if (Notification.permission !== "granted") {
+            alert("show popup");
+        }
+        else{
+           alert("hide popup");
+        }
+      });
       if("serviceWorker" in navigator){
         addEventListener("load", async () => {
             let sw = await navigator.serviceWorker.register("./sw.js");
