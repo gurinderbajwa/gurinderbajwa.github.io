@@ -4,7 +4,7 @@ self.addEventListener('install', function (event) {
 });
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
-  fetch('http://pushsocket.com/api/ExternalClient/open?u='+event.notification.data.id,{
+  fetch('https://www.pushsocket.com/api/ExternalClient/open?u='+event.notification.data.id,{
      mode: 'no-cors'
     });
   event.waitUntil(
